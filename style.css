@@ -1,0 +1,268 @@
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  background-image: url('images/cactus.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  font-family: 'Lucida Console';
+  font-size: 22px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  color: #000000;
+  justify-content: left;
+  margin-left: 100px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.navbar {
+  font-size: 18px;
+  color: #161616;
+  padding: 50;
+  text-transform: uppercase;
+}
+
+.navbar li:not(:first-child) a {
+  color: rgb(143, 143, 143);
+}
+
+.navbar ul {
+  margin-left: 770px;
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+h1 {
+  color: black;
+  font-size: 45px;
+  font-weight: 300;
+  text-align: left;
+  font-family: 'Verdana', serif;
+  width: 50%;
+  margin-left: 145px;
+  margin-top: 100px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.content {
+  color: rgb(190, 190, 190);
+  font-size: 18px;
+  width: 62%;
+  font-family: 'Verdana', serif;
+  letter-spacing: normal;
+  line-height: 2;
+  margin-left: 145px;
+  margin-top: 15px;
+}
+
+.download-btn {
+  background-color: #007BFF;
+  color: rgb(230, 230, 230);
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 145px;
+  margin-bottom: 50px;
+  padding: 2%;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-family: 'Verdana', serif;
+  text-transform: uppercase;
+}
+
+.download-dropdown .dropdown-content {
+  display: none;
+  margin-left: 145px;
+  margin-top: -50px;
+  padding: 2%;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  font-family: 'Verdana', serif;
+}
+
+.alert.alert-success {
+  background-color: #007BFF;
+  color: #fff;
+  border: 1px solid #007BFF;
+  font-size: 18px;
+  padding: 10%;
+}
+
+.alert .close {
+  color: #fff;
+}
+
+.alert.alert-success-thanks {
+  background-color: #ffffff;
+  color: #007BFF;
+  border: 1px solid #007BFF;
+  font-size: 18px;
+  padding: 2%;
+  margin-top: -150px;
+}
+
+#contact-form {
+  z-index: 999;
+  position: relative;
+  background-color: white;
+  padding: 5%;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  font-family: 'Verdana', serif;
+  margin-top: -500px;
+}
+
+.containerNew {
+  padding: 140px;
+}
+
+.row.no-gutters [class^="col-"] {
+  background-color: white;
+}
+
+.column {
+  background-color: white;
+  padding: 50px;
+  margin: 10px 0;
+  padding-top: 30px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+}
+
+.column h6 {
+  color: black;
+  font-family: 'Verdana', serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.column p {
+  color: rgb(162, 162, 162);
+  font-family: 'Verdana', serif;
+  font-size: 14px;
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+  color: #cecece;
+  margin-bottom: 40px;
+  margin-left: 5px;
+}
+
+#footer {
+  color: white;
+  background-color: #acacac;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  text-align: center;
+  margin-top: -60px;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    background: none;
+    background-color: #cecece;
+    background-image: url('images/cactus.webp');
+    background-size: 180%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: smaller;
+    margin-top: 30px;
+    margin-left: -20px;
+  }
+
+  .navbar {
+    overflow-x: hidden;
+    display: none;
+    margin-left: -980px;
+  }
+
+  .navbar.active {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar ul {
+    display: block;
+    position: fixed;
+    width: 30%;
+    z-index: 999;
+    font-size: small;
+  }
+
+  h1 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .content {
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: gray;
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .row.no-gutters [class^="col-"] {
+    background: none;
+    margin-top: -100px;
+  }
+
+  .column {
+    background-color: none;
+    width: 37vh;
+    margin-left: -90px;
+    margin-top: -20px;
+  }
+
+  .download-btn {
+    margin-left: 30px;
+  }
+
+  .menu-btn {
+    display: block;
+    border: none;
+    background-color: none;
+    margin-left: 250px;
+  }
+}

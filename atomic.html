@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Site</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <a class="logo">Atomic</a>
+    <button class="menu-btn" onclick="toggleMenu()">&#8801;</button>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a class="active">Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Services</a></li>
+        <li><a>Gallery</a></li>
+        <li><a>Blog</a></li>
+        <li><a href="javascript:showContactForm();">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Design a better website template.</h1>
+      <div class="content">
+        <p>Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, there live the
+          blind texts.</p>
+      </div>
+      <div class="dropdown download-dropdown">
+        <button class="btn btn-secondary dropdown-toggle download-btn" type="button" id="dropdownMenuButton" onclick="toggleVersionDropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Free Download
+        </button>
+        <div class="dropdown-menu dropdown-content" id="version-dropdown" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" onclick="downloadVersion('1.0')">Version 1.0</a>
+          <a class="dropdown-item" href="#" onclick="downloadVersion('2.0')">Version 2.0</a>
+          <a class="dropdown-item" href="#" onclick="downloadVersion('3.0')">Version 3.0</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact-form" class="container" style="display: none;">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <h3>Send Feedback</h3><br/>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea class="form-control" id="feedback" rows="5"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="submitFeedback()">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="thank-you-message" class="col-md-4 container text-center alert alert-success-thanks" style="display: none;"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="alert alert-success text-center" role="alert" id="download-alert" style="display: none;">
+          Thank you for downloading - Version <span id="downloaded-version"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containerNew">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <div class="column">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-lightbulb"
+            viewBox="0 0 16 16">
+            <path
+              d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+          </svg>
+          <h6>Intuitive Thinking</h6>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="column">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+          </svg>
+          <h6>Orange for Carrots</h6>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="column">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-infinity"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z" />
+          </svg>
+          <h6>Infinite Posibilities</h6>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="footer" class="col-md-12">
+      <p>&copy; <small>Developed for Training Purposes by <a>Shehani Mahalekam</a></small></p>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>
